@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/lyswhut/lx-music-mobile"><img width="350" src="https://github.com/Leancba/Clima-App/blob/main/assets/weather.png" alt="lx-music logo"></a></p>
+<p align="center"><a href="https://github.com/Leancba/Clima-App/blob/main/assets/weather.png"><img width="350" src="https://github.com/Leancba/Clima-App/blob/main/assets/weather.png" alt="lx-music logo"></a></p>
 
 
 <h1 align="center">Clima App</h1>
