@@ -56,7 +56,6 @@ const DateTime = ({current, timezone, location}) => {
            </View>
             <View style = {styles.rightAlign}>
                 <Text style = {styles.timezone}>{location.region} {location.subregion} , {location.country}  </Text>
-               
             </View> 
         </View>
     )

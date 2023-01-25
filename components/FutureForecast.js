@@ -29,8 +29,9 @@ const FutureForecastItem = ({forecastItem}) => {
         <View style = {styles.FutureForecastItemContainer} >
             <Text style = {styles.day}>{moment(forecastItem.dt * 1000).format('ddd')}</Text>
             <Image source= {img} style = {styles.image}/>
-            <Text style = {styles.temp}>Night - {Math.round(forecastItem.temp.night)}&#176;C</Text>
-            <Text style = {styles.temp}>Day - {Math.round(forecastItem.temp.day)}&#176;C</Text>
+            <Text style = {styles.temp}>Min - {Math.round(forecastItem.temp.min)}&#176;C</Text>
+            {console.log(forecastItem)}
+            <Text style = {styles.temp}>Max - {Math.round(forecastItem.temp.max)}&#176;C</Text>
         </View>
     )
 }

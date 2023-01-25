@@ -17,7 +17,7 @@ import WheaterScroll from './components/WheaterScroll.js';
 
 
 
-const API_KEY ='ff26d804d0d9d838fc3e57227eed4bcc';
+const API_KEY ='46a29858c6f8c2b045f2f9240215af0f';
 
 
 
@@ -29,8 +29,7 @@ const App = () => {
 
   const [data, setData] = useState({});
   const [location, setLocation] = useState([]);
-
-  console.log(Location)
+  
 
   const handleGetWeather = async () => {
     const { status } = await Location.requestForegroundPermissionsAsync();
@@ -40,11 +39,12 @@ const App = () => {
       const {
         coords: { latitude, longitude },
       } = await Location.getCurrentPositionAsync({ accuracy: 5 });
-      const location = await Location.reverseGeocodeAsync({ latitude, longitude }, { useGoogleMaps: false });
+      
       const data = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=alerts&appid=${API_KEY}&units=metric`);
       const json = await data.json();
+      console.log(json)
      
-      setLocation(location[0]);
+      setLocation(json);
 
       setData(json);
       
